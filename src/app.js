@@ -1,11 +1,12 @@
+(function($){
+	'use strict';
 
-(function(){
+	var parser = new Parser();
+	parser.parseFile('../dump/busy_day.in', function(data) {
+		
+		// data is your magic object !!! :D
+		console.log(data);
 
-
-	$.get('../dump/logo.in', function(result){
-
-		var lines = result.split('\n');
-		console.log(lines);
-		$('#result').text(result);
 	});
-})();
+
+})(jQuery);
