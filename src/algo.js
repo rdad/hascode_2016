@@ -11,12 +11,13 @@ function algo(data){
 
 		for(var j = 0; j<orders.fast.length; j++){
 
-			var order = orders.fast[j];
+			var oid = orders.fast[j];
+			var order = data.orders[oid];
 
 			for(var k = 0; k<order.warehouse_classed.length; j++){
 
 				var wid = order.warehouse_classed[k].whid;
-				var ok = disponibility(order, data.warehouse[wid]);
+				var ok = disponibility(order, data.warehouses[wid]);
 
 				if(ok === true){
 
